@@ -4,7 +4,7 @@
  * 
  * @author Steven Oderayi <oderayi@gmail.com>
  */
-function clusters(rows, column, grid)
+function clusters(rows, columns, grid)
 {
     const labels = {}
     const eqv = []
@@ -12,7 +12,7 @@ function clusters(rows, column, grid)
 
     // First pass
     for(i=0; i<rows; i++) {
-        for(j=0; j<column; j++) {
+        for(j=0; j<columns; j++) {
             let cell = grid[i][j]
             if (!cell) continue
             let topLabel = labels[`${i}_${j-1}`] || undefined
